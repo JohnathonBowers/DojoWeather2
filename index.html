@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="topbar">
+        <header>
+            <h1><a href="#" class="navlink">DojoWeather</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="navlink" onclick="alert('Loading weather report...')"><h2>Burbank</h2></a></li>
+                    <li><a href="#" class="navlink" onclick="alert('Loading weather report...')"><h2>Chicago</h2></a></li>
+                    <li><a href="#" class="navlink" onclick="alert('Loading weather report...')"><h2>Dallas</h2></a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="flex-container">
+    
+        <!-- Title bar showing current city and Fahrenheit/Celsius selector -->
+        <div class="title">
+            <p class="home-city">San Jose</p>
+            <div class="show-temp">
+                <p>show temperature in</p>
+                <div class="degmenu">
+                    <select id="degtype" onchange="changeTemp()">
+                        <option value="fahrenheit">°F</option>
+                        <option value="celsius">°C</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body of page showing weather by city -->
+        <main>
+            <div class="section">
+                <div class="day">
+                    <p>Today</p>
+                </div>
+                <div class="weather-icon">
+                    <img src="assets/some_rain.png" alt="rain cloud icon">
+                </div>
+                <div class="weather-descr">
+                    <p>some rain</p>
+                </div>
+                <div class="high-low">
+                    <div class="high">
+                        <p id="todayhigh">75°</p>
+                    </div>
+                    <div class="low">
+                        <p id="todaylow">65°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="day">
+                    <p>Tomorrow</p>
+                </div>
+                <div class="weather-icon">
+                    <img src="assets/some_sun.png" alt="sun icon">
+                </div>
+                <div class="weather-descr">
+                    <p>some sun</p>
+                </div>
+                <div class="high-low">
+                    <div class="high">
+                        <p id="tomhigh">80°</p>
+                    </div>
+                    <div class="low">
+                        <p id="tomlow">66°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="day">
+                    <p>Friday</p>
+                </div>
+                <div class="weather-icon">
+                    <img src="assets/some_clouds.png" alt="cloud icon">
+                </div>
+                <div class="weather-descr">
+                    <p>some clouds</p>
+                </div>
+                <div class="high-low">
+                    <div class="high">
+                        <p id="frihigh">69°</p>
+                    </div>
+                    <div class="low">
+                        <p id="frilow">61°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="day">
+                    <p>Saturday</p>
+                </div>
+                <div class="weather-icon">
+                    <img src="assets/some_sun.png" alt="sun icon">
+                </div>
+                <div class="weather-descr">
+                    <p>some sun</p>
+                </div>
+                <div class="high-low">
+                    <div class="high">
+                        <p id="sathigh">78°</p>
+                    </div>
+                    <div class="low">
+                        <p id="satlow">70°</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
